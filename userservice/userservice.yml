@@ -12,7 +12,7 @@ spring:
         dialect: "org.hibernate.dialect.MySQL8Dialect"
 
   datasource:
-    url: "jdbc:mysql://ping.qixqi.cn:3306/pan?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true"
+    url: "jdbc:mysql://ali.qixqi.cn:3306/pan?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true"
     username: "root"
     password: "1214"
     driver-class-name: "com.mysql.cj.jdbc.Driver"
@@ -20,3 +20,47 @@ spring:
       test-while-idle: true
       validation-query: "SELECT 1"
     initialization-mode: never
+  # Spring Sleuth & Zipkin
+  zipkin:
+    base-url: http://shimengya.qixqi.cn:9411
+  sleuth:
+    sampler:
+      probability: 1.0    # 跟踪全部事务
+
+
+
+# Spring Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"    # 暴露所有端点
+  endpoint:
+    shutdown:
+      enabled: true     # get请求不行，post可以
+
+# Eureka 服务发现
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://ali5.qixqi.cn:8761/eureka/
+
+# Spring Security
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:8901/auth/user
+
+# JWT 令牌密钥
+jwt:
+  signing:
+    key: "345345fsdgsf5345"
+
+
+
+
+
