@@ -22,7 +22,7 @@ spring:
     initialization-mode: never
   # Spring Sleuth & Zipkin
   zipkin:
-    base-url: http://shimengya.qixqi.cn:9411
+    base-url: http://106.13.37.37:9411
   sleuth:
     sampler:
       probability: 1.0    # 跟踪全部事务
