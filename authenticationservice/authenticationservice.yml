@@ -1,0 +1,39 @@
+example:
+  property: "This is default property"
+
+server:
+  servlet:
+    context-path: /auth
+  port: 8901
+
+spring:
+  zipkin:
+    base-url: http://shimengya.qixqi.cn:9411
+  sleuth:
+    sampler:
+      probability: 1.0    # 跟踪全部事务
+
+# Spring Actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"    # 暴露所有端点
+  endpoint:
+    shutdown:
+      enabled: true     # get请求不行，post可以
+
+# Eureka 服务发现
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://ali5.qixqi.cn:8761/eureka/
+
+# JWT 令牌密钥
+jwt:
+  signing:
+    key: "345345fsdgsf5345"
