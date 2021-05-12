@@ -95,3 +95,8 @@ user-context:
     trace-id: "trace_id"
     auth-token: "auth_token"
     uid: "uid"
+
+# JWT 令牌密钥
+jwt:
+  signing:
+    key: "7f.@$s7232biebs"
