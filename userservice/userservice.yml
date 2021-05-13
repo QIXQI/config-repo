@@ -69,7 +69,7 @@ logging:
 user-context:
   key:
     trace-id: "trace_id"
-    auth-token: "auth_token"
+    auth-token: "Authorization"
     uid: "uid"
 
 
