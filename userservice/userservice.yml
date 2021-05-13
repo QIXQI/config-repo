@@ -47,7 +47,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://ali5.qixqi.cn:8761/eureka/
+      defaultZone: http://120.78.133.190:8761/eureka/		# ali5.qixqi.cn
 
 # Spring Security
 security:
