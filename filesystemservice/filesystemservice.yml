@@ -55,6 +55,7 @@ db:
     init:
       file: "file.json"
       folder_link: "folder_link.json"
+      file_md5: "file_md5.json"
 
 # Spring Actuator
 management:
