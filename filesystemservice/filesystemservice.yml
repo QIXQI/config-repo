@@ -6,7 +6,7 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://pan:pan1214@ali.qixqi.cn:29017,ping.qixqi.cn:29017,ali3.qixqi.cn:29017/pan
+      uri: mongodb://pan:pan1214@baidu.qixqi.cn:29017,shimengya.qixqi.cn:29017,ali3.qixqi.cn:29017/pan
   # Spring Sleuth & Zipkin
   zipkin:
     base-url: http://106.13.37.37:9411
@@ -23,12 +23,12 @@ spring:
       kafka:
         binder:
           # Kafka 和 ZooKeeper 的地址
-          zkNodes: ping.qixqi.cn:2181
-          brokers: ping.qixqi.cn:9092
+          zkNodes: ali3.qixqi.cn:2181
+          brokers: ali3.qixqi.cn:9092
   # Redis Cluster
   redis:
     cluster:
-      nodes: ali.qixqi.cn:6379,ping.qixqi.cn:6379,ali3.qixqi.cn:6379,ali4.qixqi.cn:6379,ali5.qixqi.cn:6379,ali6.qixqi.cn:6379
+      nodes: baidu.qixqi.cn:6379,shimengya.qixqi.cn:6379,ali3.qixqi.cn:6379,ali4.qixqi.cn:6379,ali5.qixqi.cn:6379,ali6.qixqi.cn:6379
       max-redirects: 2      # 最大重定向次数
     lettuce:
       pool:
